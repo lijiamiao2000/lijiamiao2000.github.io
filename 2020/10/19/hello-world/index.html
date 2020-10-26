@@ -1,31 +1,128 @@
-extends includes/layout.pug
-
-block content
-  #post
-    if top_img === false
-      include includes/header/post-info.pug
-
-    article#article-container.post-content!=page.content
-    include includes/post/post-copyright.pug
-    .tag_share
-      if (theme.post_meta.post.tags)
-        .post-meta__tag-list
-          each item, index in page.tags.data
-            a(href=url_for(item.path)).post-meta__tags #[=item.name]
-      include includes/third-party/share/index.pug
-        
-    if theme.reward.enable
-      !=partial('includes/post/reward', {}, {cache:theme.fragment_cache})
-
-    //- ad
-    if theme.ad && theme.ad.post
-      .post-ad!=theme.ad.post
-
-    include includes/pagination.pug
-    if theme.related_post && theme.related_post.enable
-      != related_posts(page,site.posts)
-
-    if page.comments !== false && theme.comments && theme.comments.use
-      - var commentsJsLoad = true
-      !=partial('includes/third-party/comments/index', {}, {cache:theme.fragment_cache})
-      
+#article-container {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+#article-container a {
+  color: $theme-link-color;
+}
+#article-container a:hover {
+  text-decoration: underline;
+}
+#article-container img {
+  margin: 0 auto 0.8rem;
+}
+#article-container p {
+  margin: 0 0 0.8rem;
+}
+#article-container iframe {
+  margin: 0 0 1rem;
+}
+#article-container ol,
+#article-container ul {
+  margin-top: 0.4rem;
+}
+#article-container ol p,
+#article-container ul p {
+  margin: 0 0 0.5rem;
+}
+#article-container ol ol,
+#article-container ul ol,
+#article-container ol ul,
+#article-container ul ul {
+  padding-left: 0.5rem;
+}
+#article-container ol li,
+#article-container ul li {
+  position: relative;
+  margin: 0.3rem 0;
+  padding-left: 0.3rem;
+}
+#post img {
+  display: block;
+}
+#post .tag_share .post-meta__tag-list {
+  display: inline-block;
+}
+#post .tag_share .post-meta__tags {
+  display: inline-block;
+  margin: 0.4rem 0.4rem 0.4rem 0;
+  padding: 0 0.6rem;
+  width: fit-content;
+  border: 1px solid $light-blue;
+  border-radius: 0.6rem;
+  color: $light-blue;
+  font-size: 0.85em;
+  transition: all 0.2s ease-in-out;
+}
+#post .tag_share .post-meta__tags:hover {
+  background: $light-blue;
+  color: var(--white);
+}
+#post .tag_share .post_share {
+  display: inline-block;
+  float: right;
+  margin: 0.4rem 0;
+  width: fit-content;
+}
+#post .tag_share .post_share .social-share {
+  font-size: 0.85em;
+}
+#post .tag_share .post_share .social-share .social-share-icon {
+  margin: 0 4px;
+  width: 1.85em;
+  height: 1.85em;
+  font-size: 1.2em;
+  line-height: 1.85em;
+}
+#post .post-copyright {
+  position: relative;
+  margin: 2rem 0 0.5rem;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--light-grey);
+  transition: box-shadow 0.3s ease-in-out;
+}
+#post .post-copyright:before {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 0.8rem;
+  background: $light-blue;
+  content: '';
+}
+#post .post-copyright:after {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 0.4rem;
+  background: var(--card-bg);
+  content: '';
+}
+#post .post-copyright:hover {
+  box-shadow: 0 0 8px 0 rgba(232,237,250,0.6), 0 2px 4px 0 rgba(232,237,250,0.5);
+}
+#post .post-copyright .post-copyright-meta {
+  color: $light-blue;
+  font-weight: bold;
+}
+#post .post-copyright .post-copyright-info {
+  padding-left: 0.3rem;
+}
+#post .post-copyright .post-copyright-info a {
+  text-decoration: underline;
+  word-break: break-word;
+}
+#post .post-copyright .post-copyright-info a:hover {
+  text-decoration: none;
+}
+#post .post-outdate-notice {
+  position: relative;
+  margin: 0 0 1rem;
+  padding: 0.5em 1.2em;
+  border-radius: 3px;
+  background-color: $noticeOutdate-bg;
+  color: $noticeOutdate-color;
+}
