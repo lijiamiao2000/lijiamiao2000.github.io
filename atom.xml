@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-11-07T09:40:49.745Z</updated>
+  <updated>2020-11-08T07:10:40.111Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>图床</title>
+    <link href="http://example.com/2020/11/08/%E5%9B%BE%E5%BA%8A/"/>
+    <id>http://example.com/2020/11/08/%E5%9B%BE%E5%BA%8A/</id>
+    <published>2020-11-08T07:06:29.000Z</published>
+    <updated>2020-11-08T07:10:40.111Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="黑暗之魂3"><a href="#黑暗之魂3" class="headerlink" title="黑暗之魂3"></a>黑暗之魂3</h1><p><img src="/2020/11/08/%E5%9B%BE%E5%BA%8A/%E9%BB%91%E9%AD%82%E9%A1%B6%E9%83%A8%E5%9B%BE.jpg"><br><img src="/2020/11/08/%E5%9B%BE%E5%BA%8A/%E9%BB%91%E9%AD%82%E5%B0%81%E9%9D%A2.jpg"></p><h1 id="行尸走肉"><a href="#行尸走肉" class="headerlink" title="行尸走肉"></a>行尸走肉</h1><p><img src="/2020/11/08/%E5%9B%BE%E5%BA%8A/%E8%A1%8C%E5%B0%B8%E8%B5%B0%E8%82%89%E9%A1%B6%E9%83%A8%E5%9B%BE.jpg"><br><img src="/2020/11/08/%E5%9B%BE%E5%BA%8A/%E8%A1%8C%E5%B0%B8%E8%B5%B0%E8%82%89%E5%B0%81%E9%9D%A2.jpg"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;黑暗之魂3&quot;&gt;&lt;a href=&quot;#黑暗之魂3&quot; class=&quot;headerlink&quot; title=&quot;黑暗之魂3&quot;&gt;&lt;/a&gt;黑暗之魂3&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/2020/11/08/%E5%9B%BE%E5%BA%8A/%E9%BB%91%E9%AD%8</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>行尸走肉系列：成长和传承的故事</title>
